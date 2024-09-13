@@ -24,5 +24,5 @@ const postSlice = createSlice({
   }
 });
 
-export const { fetchDataRequest, fetchDataSuccess, fetchDataFailure } = exampleSlice.actions;
-export default exampleSlice.reducer;
+export const { fetchDataRequest, fetchDataSuccess, fetchDataFailure } = postSlice.actions;
+export default postSlice.reducer;
