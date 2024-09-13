@@ -16,8 +16,5 @@ const authSlice = createSlice({
 export const handleLogin = async () =>{
     localStorage.setItem('auth',"Bearer 56873893303010210201020121921983938981830192019201920190291938293778247")
 }
-export const handleLogout = async () =>{
-    localStorage.clear()
-}
 export const { saveUser } = authSlice.actions;
 export default authSlice.reducer;

@@ -1,0 +1,10 @@
+@import '../../theme/variables.scss';
+.main-layout{
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .layout-content{
+        flex: 1;
+    }
+}

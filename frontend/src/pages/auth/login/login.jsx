@@ -1,7 +1,9 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import { handleLogin, saveUser } from '../../../redux/reducers/authSlice'
+import { handleLogin, saveUser } from '../../../redux/reducers/authSlice/authSlice'
 import {useNavigate} from 'react-router-dom'
+import './index.scss'
+import Input from '../../../components/common/input/Input'
 const Login = () => {
   const navigate= useNavigate()
   const dispatch = useDispatch()
@@ -16,9 +18,15 @@ const Login = () => {
     localStorage.setItem('user',JSON.stringify(user))
   }
   return (
-    <div>
-        Login
-        <button onClick={onSubmit}>Login</button>
+    <div className='login-page'>
+        <div className='login-form'>
+         
+          <form>
+            <Input label={"Username"}/>
+            <Input label={"Password"}/>
+            <button onClick={onSubmit}>Login</button>
+          </form>
+        </div>
     </div>
   )
 }

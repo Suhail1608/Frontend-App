@@ -1,0 +1,15 @@
+.input-holder{
+    display: flex;
+    flex-direction: column;
+    .label{
+        margin: 4px;
+    }
+    .common-input{
+        border: 1px solid #444;
+        border-radius: 4px;
+        outline: none;
+        min-height: 30px;
+    }
+   
+}
+
