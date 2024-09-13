@@ -1,32 +1,31 @@
-[
-    {
-      "name": "Android",
-      "short": "A",
-      "priority": 2,
-      "cards": 38
-    },
-    {
-      "name": "Kotlin",
-      "short": "K",
-      "priority": 3,
-      "cards": 30
-    },
-    {
-      "name": "Java",
-      "short": "J",
-      "priority": 4,
-      "cards": 30
-    },
-    {
-      "name": "Data Structures",
-      "short": "Ds",
-      "priority": 5,
-      "cards": 30
-    },
-    {
-      "name": "Algorithms",
-      "short": "Al",
-      "priority": 6,
-      "cards": 30
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Post 1"
+        },
+        {
+            "id": 2,
+            "title": "Post 2"
+        },
+        {
+            "id": 3,
+            "title": "Post 3"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        },
+        {
+            "id": 2,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
     }
-  ]
+}
