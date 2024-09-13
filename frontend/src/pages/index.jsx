@@ -3,7 +3,9 @@ import { toast } from 'react-toastify'
 
 const Home = () => {
   return (
-    <div>Home <button onClick={()=>{toast.error("Hi")}}>Toast</button></div>
+    <div>Home 
+      {/* <button onClick={()=>{toast.error("Hi")}}>Toast</button> */}
+    </div>
   )
 }
 
