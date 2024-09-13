@@ -6,15 +6,19 @@ import Home from './pages'
 import Posts from './pages/posts'
 import './App.css'
 import Login from './pages/auth/login'
+import AuthLayout from './layouts/AuthLayout'
 function App() {
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/auth/login' element={<Login/>}></Route>
-          <Route path='/posts' element={<Posts/>}></Route>
+       
+            <Route path='/auth/login' element={<Login/>}></Route>
+            <Route element={<AuthLayout/>}>
+              <Route path='/' element={<Home/>}></Route>
+              <Route path='/posts' element={<Posts/>}></Route>
+            </Route>
         </Routes>
       </BrowserRouter>
     </>
