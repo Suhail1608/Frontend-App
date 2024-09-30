@@ -1,13 +1,23 @@
 import React from 'react'
 import './index.scss'
-const Input = ({label,value,setValue}) => {
+const Input = ({label,value,setValue,field}) => {
+  const handleOnChange = (e,field) =>{
+    if(field){
+      setValue((prev)=>({
+        ...prev,
+        [field]:e.target.value
+      }))
+    }else{
+      setValue(e.target.value)
+    }
+  }
   return (
     <div className='input-holder'>
     <p className='label'>{label}</p>
     <input
         className='common-input'
         value={value}
-        onChange={setValue}
+        onChange={(e)=>{handleOnChange(e,field)}}
     />
     </div>
   )

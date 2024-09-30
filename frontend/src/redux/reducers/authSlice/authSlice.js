@@ -7,14 +7,16 @@ const authSlice = createSlice({
   reducers: {
     saveUser: (state, action) => {
       state.data = action.payload;
+      localStorage.setItem('user',JSON.stringify(action.payload))
     },
     removeUser: (state,action)=>{
       state.data = action.payload;
+      localStorage.clear()
     }
   }
 });
-export const handleLogin = async () =>{
-    localStorage.setItem('auth',"Bearer 56873893303010210201020121921983938981830192019201920190291938293778247")
+export const handleLogin = async (token) =>{
+    localStorage.setItem('auth',token)
 }
 export const { saveUser } = authSlice.actions;
 export default authSlice.reducer;

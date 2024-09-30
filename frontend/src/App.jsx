@@ -8,6 +8,7 @@ import './App.css'
 import Login from './pages/auth/login/login'
 import AuthLayout from './layouts/AuthLayout/AuthLayout'
 import MainLayout from './layouts/MainLayout/MainLayout'
+import SignUp from './pages/auth/signup/signup'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
             <Route path='/auth/login' element={<Login/>}></Route>
+            <Route path='/auth/signup' element={<SignUp/>}></Route>
             <Route element={<AuthLayout/>}>
               <Route element={<MainLayout/>}>
                 <Route path='/' element={<Home/>}></Route>
