@@ -18,5 +18,5 @@ const authSlice = createSlice({
 export const handleLogin = async (token) =>{
     localStorage.setItem('auth',token)
 }
-export const { saveUser } = authSlice.actions;
+export const { saveUser,removeUser } = authSlice.actions;
 export default authSlice.reducer;

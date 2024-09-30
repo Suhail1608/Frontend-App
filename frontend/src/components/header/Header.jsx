@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import { saveUser } from '../../redux/reducers/authSlice/authSlice'
+import { saveUser,removeUser } from '../../redux/reducers/authSlice/authSlice'
 import './index.scss'
 const Header = () => {
     const navigate = useNavigate()
@@ -29,8 +29,7 @@ const Header = () => {
         },
     ]
 const handleLogout = async()=>{
-    dispatch(saveUser(null))
-    localStorage.clear()
+    dispatch(removeUser(null))
     navigate('/auth/login')
 }
   return (
